@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Stamp Design</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="css/icon.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,600,300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,600' rel='stylesheet' type='text/css'>
+	<script src="js/jquery-1.11.1.min.js"></script>
+</head>
+<body class="show-mobile-menu"> 
+	<header>
+		<div id="header_wrapper">
+			<h1><a href="index.html"><img id="logo" src="images/logo.jpg" alt="Yurie Midorikawa" width="57px"/></a></h1>
+			<button class="btn-mobile-menu">
+				Menu
+			</button>
+			<ul id="nav">
+				<li class="global_nav"><a href="index.html#about" class="global_about_bt">ABOUT</a></li>
+				<li class="global_nav"><a href="index.html#work" class="global_work_bt">WORK</a></li>
+				<li class="global_nav"><a href="index.html#contact" class="global_contact_bt">CONTACT</a></li>
+			</ul>
+		</div>
+	</header>
+	<section id="work_2">
+		<h1 class="sub_title_bk">STAMP DESIGN</h1>
+		<hr class="blue_line">
+		<h2 class="job_title">Canadian Halloween</h1>
+			<p class="work_description">
+				A Canadian stamp sheet for Halloween. Using typical characters in Halloween and stack on the top of each other to make it looks like the Canadian totem pole. Each stamps holds the same character as the sheet to make it consistent, and the design is simple since the stamp sheet has a colourful scheme.
+			</p>
+		</section>
+		<section class="work_img">
+			<img class="img_center_top" src="images/halloween/halloween.jpg" alt="Portfolio Website Design" style="max-width:700px;width:90%"/>
+
+
+			<h2 class="project_data">Project Data</h1>
+				<ul class="icon_ul">
+					<li class="icon_li"><img src="images/icon/clock.png"/>2014</li>
+					<li class="icon_li"><img src="images/icon/screen.png"/>Personal Project</li>
+					<li class="icon_li"><img src="images/icon/pencil.png"/>Illustrator/InDesign</li>
+				</ul>
+
+			</section>
+			<section class="view_proj">
+				<h2 class="other_proj">Would you like to see my other projects?</h1>
+					<div id="view_proj_container">
+
+
+						<a class="ghost_button_arrow pre" href="portfolio.html">
+							<img src="images/left-arrow.png" class="arrow_left">PREVIOUS PROJECT
+						</a>
+						<a class="ghost_button_arrow next" href="card.html">
+							NEXT PROJECT<img src="images/right-arrow.png" class="arrow_right">
+						</a>
+
+					</div>
+				</section>
+
+
+
+				<div class="cb"></div>
+				<footer>
+					<div id="footer-inner">
+						<div id="footer-left">
+							<ul>
+								<li>
+									<a href="index.html" class="global_home_bt">HOME</a>
+								</li>
+								<li>
+									<a href="index.html#about" class="global_about_bt">ABOUT</a>
+								</li>
+								<li>
+									<a href="index.html#work" class="global_work_bt">WORKS</a>
+								</li>
+								<li class="last">
+									<a href="index.html#contact" class="global_contact_bt">CONTACT</a>
+								</li>
+
+							</ul>
+						</div><!-- end footer-left-->
+						<div class='icons'>
+							<a href="https://www.facebook.com/yurie.midorikawa" target="blank"><span class="icon-facebook"></span></a>
+							<a href="http://instagram.com/lily2896/" target="blank"><span class="icon-instagram"></span></a>
+							<a href="https://plus.google.com/u/0/101980727026444728877/about/p/pub" target="blank"><span class="icon-googleplus"></span></a>
+						</div>
+						<div id="copyright">&copy;YURIE MIDORIKAWA</div>
+
+					</div><!-- end footer-inner-->
+				</footer>
+				<!-- jQuery CDN -->
+				<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+				<!-- jQuery local fallback -->
+				<script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+				<script type="text/javascript" src="js/jquery.easing.min.js"></script>
+				<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+				<script type="text/javascript" src="js/filter.js"></script>
+				<script type="text/javascript" src="js/menu.js"></script>
+				<script>
+
+				function resize_img() {
+					var w_height = $(window).height();
+					var img_height = w_height - 120;
+					var title_padding = (img_height - (57 + 62 + 30 + 74)) / 2;
+					$("#big-image").height(img_height);
+					if (title_padding >= 240){
+						$("h1#title").css("padding-top", title_padding);
+					}
+				}
+
+				function scroll_to_element(target) {
+					$(".global_" + target + "_bt").click(function() {
+						$('html, body').animate({
+							scrollTop: $("#" + target).offset().top
+						}, 500);
+					});
+				}
+
+
+				$(document).ready(function() {
+					resize_img();
+					scroll_to_element('about');
+					scroll_to_element('work');
+					scroll_to_element('contact');
+				});
+				$(window).resize(function() {
+					resize_img();
+				});
+
+
+				</script>
+			</body>
+			</html>
